@@ -7,12 +7,13 @@ public class Shop {
 
         // Creo il nuovo Prodotto
         Product pasta = new Product("Fusilli", "Pasta Corta", 10.0, 22);
-        System.out.println(pasta.getCode());
-        System.out.println(pasta.getName());
-        System.out.println(pasta.completeName());
-        System.out.println(pasta.getDescription());
-        System.out.println(pasta.getPrice());
-        System.out.println(pasta.vatPrice());
-        System.out.println(pasta.getVat());
+        System.out.println("Name " + pasta.getName());
+        System.out.println("Code: " + pasta.getCode());
+        System.out.println("Name + Code: " + pasta.completeName());
+        System.out.println("Description: " + pasta.getDescription());
+        System.out.println("Price: " + pasta.getPrice());
+        System.out.println("Vat: " + pasta.getVat());
+        System.out.println("Vat + Price: " + pasta.vatPrice());
+
     }
 }

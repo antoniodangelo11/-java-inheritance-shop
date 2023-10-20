@@ -14,7 +14,8 @@ public class Product {
 
     // Costruttore
     public Product(String name, String description, double price, int vat) {
-        this.code = getCode();
+        Random rand = new Random();
+        this.code = rand.nextInt(20);
         this.name = name;
         this.description = description;
         this.price = price;
@@ -23,8 +24,7 @@ public class Product {
 
     // Metodi
     public int getCode(){
-        Random rand = new Random();
-        return rand.nextInt(20);
+        return this.code;
     }
     public String getName(){
         return this.name;
