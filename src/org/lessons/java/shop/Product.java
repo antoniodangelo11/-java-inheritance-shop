@@ -16,8 +16,7 @@ public class Product {
 
     // Costruttore
     public Product(String name, String description, BigDecimal price, BigDecimal vat) {
-        Random rand = new Random();
-        this.code = rand.nextInt(20);
+        this.code = generateCode();
         this.name = name;
         this.description = description;
         this.price = price;
@@ -25,8 +24,17 @@ public class Product {
     }
 
     // Metodi
-    public int getCode(){
-        return this.code;
+    private int generateCode(){
+        Random rand = new Random();
+        return rand.nextInt(1, 100000000);
+    }
+    // BONUS
+    public String getPaddedCode() {
+        String codeString = Integer.toString(code);
+        while(codeString.length() < 8){
+            codeString = "0" + codeString;
+        }
+        return codeString;
     }
     public String getName(){
         return this.name;
