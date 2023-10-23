@@ -1,5 +1,7 @@
 package org.lessons.java.shop;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Random;
 
 public class Product {
@@ -8,12 +10,12 @@ public class Product {
     private final int code;
     private String name;
     private String description;
-    private double price;
-    private int vat;
+    private BigDecimal price;
+    private BigDecimal vat;
 
 
     // Costruttore
-    public Product(String name, String description, double price, int vat) {
+    public Product(String name, String description, BigDecimal price, BigDecimal vat) {
         Random rand = new Random();
         this.code = rand.nextInt(20);
         this.name = name;
@@ -41,20 +43,20 @@ public class Product {
     public void setDescription(String description){
         this.description = description;
     }
-    public double getPrice(){
+    public BigDecimal getPrice(){
         return this.price;
     }
-    public void setPrice(double price){
+    public void setPrice(BigDecimal price){
         this.price = price;
     }
-    public int getVat(){
+    public BigDecimal getVat(){
         return this.vat;
     }
-    public double vatPrice() {
-        this.price = this.price * (1 + ((double) this.vat / 100));
-        return this.price;
+    public BigDecimal vatPrice() {
+        // Prezzo base + prezzo base * iva
+        return this.price.add(price.multiply(vat));
     }
-    public void setVat(int vat){
+    public void setVat(BigDecimal vat){
         this.vat = vat;
     }
 }

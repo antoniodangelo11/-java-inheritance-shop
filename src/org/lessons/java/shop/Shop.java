@@ -1,12 +1,11 @@
 package org.lessons.java.shop;
 
-import java.util.Scanner;
-
+import java.math.BigDecimal;
 public class Shop {
     public static void main(String[] args) {
 
         // Creo il nuovo Prodotto
-        Product pasta = new Product("Fusilli", "Pasta Corta", 10.0, 22);
+        Product pasta = new Product("Fusilli", "Pasta Corta", new BigDecimal("10.00"), new BigDecimal("22.00"));
         System.out.println("Name " + pasta.getName());
         System.out.println("Code: " + pasta.getCode());
         System.out.println("Name + Code: " + pasta.completeName());
