@@ -14,7 +14,7 @@ public class Product {
     private BigDecimal vat;
 
 
-    // Costruttore
+    // Costruttori
     public Product(String name, String description, BigDecimal price, BigDecimal vat) {
         this.code = generateCode();
         this.name = name;
