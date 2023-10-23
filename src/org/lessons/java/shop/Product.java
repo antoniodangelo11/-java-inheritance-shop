@@ -54,7 +54,7 @@ public class Product {
     }
     public BigDecimal vatPrice() {
         // Prezzo base + prezzo base * iva
-        return this.price.add(price.multiply(vat));
+        return this.price.add(price.multiply(vat)).setScale(2,RoundingMode.HALF_EVEN);
     }
     public void setVat(BigDecimal vat){
         this.vat = vat;
