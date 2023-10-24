@@ -13,6 +13,8 @@ public class Product {
     private BigDecimal price;
     private BigDecimal vat;
 
+    private  static int counter = 0;
+
 
     // Costruttori
     public Product(String name, String description, BigDecimal price, BigDecimal vat) {
@@ -21,9 +23,13 @@ public class Product {
         this.description = description;
         this.price = price;
         this.vat = vat;
+
+        counter++;
+
+        counter = code;
     }
 
-    // Metodi
+    // Metodi - Getter e Setter
     private int generateCode(){
         Random rand = new Random();
         return rand.nextInt(1, 100000000);

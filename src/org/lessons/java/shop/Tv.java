@@ -5,22 +5,32 @@ import java.math.BigDecimal;
 public class Tv extends Product {
 
     // Attributi per Tv
-    private String size;
+    private int dimensions;
     private boolean smart;
 
     // Costruttori
-    public Tv(String name, String description, BigDecimal price, BigDecimal vat, String size, boolean smart) {
+    public Tv(String name, String description, BigDecimal price, BigDecimal vat, int dimensions, boolean smart) {
+
+        // Costruttore di Product
         super(name, description, price, vat);
-        this.size = size;
+
+        // Nuovi valori
+        this.dimensions = dimensions;
         this.smart = smart;
     }
 
-    // Metodi
-    public String getSize() {
-        return this.size;
+    // Metodi - Getter e Setter
+    public int getDimensions() {
+        return dimensions;
     }
     public boolean isSmart() {
-        return this.smart;
+        return smart;
+    }
+    public void setDimensions(int dimensions) {
+        this.dimensions = dimensions;
+    }
+    public void setSmart(boolean smart) {
+        this.smart = smart;
     }
 }
 

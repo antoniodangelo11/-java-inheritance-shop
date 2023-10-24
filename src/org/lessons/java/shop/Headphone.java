@@ -10,16 +10,26 @@ public class Headphone extends Product {
 
     // Costruttori
     public Headphone(String name, String description, BigDecimal price, BigDecimal vat, String color, boolean wireless) {
+
+        // Costruttore di Product
         super(name, description, price, vat);
+
+        // Nuovi valori
         this.color = color;
         this.wireless = wireless;
     }
 
-    // Metodi
+    // Metodi - Getter e Setter
     public String getColor() {
-        return this.color;
+        return color;
     }
     public boolean isWireless() {
-        return this.wireless;
+        return wireless;
+    }
+    public void setColor(String color) {
+        this.color = color;
+    }
+    public void setWireless(boolean wireless) {
+        this.wireless = wireless;
     }
 }

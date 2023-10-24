@@ -5,14 +5,29 @@ import java.math.BigDecimal;
 public class Smartphone extends Product {
 
     // Attributi per Smartphone
-    private final int imeiCode;
-    private int amountOfMemory;
+    private final String imei;
+    private int memory;
 
     // Costruttori
-    public Smartphone(String name, String description, BigDecimal price, BigDecimal vat, int imeiCode,
-                      int amountOfMemory) {
+    public Smartphone(String name, String description, BigDecimal price, BigDecimal vat, String imei,
+                      int memory) {
+
+        // Costruttore di Product
         super(name, description, price, vat);
-        this.imeiCode = imeiCode;
-        this.amountOfMemory = amountOfMemory;
+
+        // Nuovi valori
+        this.imei = imei;
+        this.memory = memory;
+    }
+
+    // Metodi - Getter e Setter
+    public String getImei() {
+        return imei;
+    }
+    public int getMemory() {
+        return memory;
+    }
+    public void setMemory(int memory) {
+        this.memory = memory;
     }
 }
