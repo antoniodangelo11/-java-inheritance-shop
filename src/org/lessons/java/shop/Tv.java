@@ -32,5 +32,18 @@ public class Tv extends Product {
     public void setSmart(boolean smart) {
         this.smart = smart;
     }
+
+    @Override
+    public String toString() {
+        return "Tv{" +
+                "code=" + getCode() +
+                ", name='" + getName() + '\'' +
+                ", description='" + getDescription() + '\'' +
+                ", price=" + getPrice() +
+                ", vat=" + getVat() +
+                "dimensions=" + dimensions +
+                ", smart=" + smart +
+                '}';
+    }
 }
 

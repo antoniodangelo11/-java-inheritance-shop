@@ -32,4 +32,17 @@ public class Headphone extends Product {
     public void setWireless(boolean wireless) {
         this.wireless = wireless;
     }
+
+    @Override
+    public String toString() {
+        return "Headphone{" +
+                "code=" + getCode() +
+                ", name='" + getName() + '\'' +
+                ", description='" + getDescription() + '\'' +
+                ", price=" + getPrice() +
+                ", vat=" + getVat() +
+                "color='" + color + '\'' +
+                ", wireless=" + wireless +
+                '}';
+    }
 }
